@@ -48,7 +48,7 @@ public class Funcionario implements Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return id;
 	}
@@ -107,7 +107,7 @@ public class Funcionario implements Serializable {
 		this.valorHora = valorHora;
 	}
 
-	@Column(name = "qtde_horas_trabalho_dia", nullable = true)
+	@Column(name = "qtd_horas_trabalho_dia", nullable = true)
 	public Float getQtdeHorasTrabalhoDia() {
 		return qtdeHorasTrabalhoDia;
 	}
@@ -121,7 +121,7 @@ public class Funcionario implements Serializable {
 		this.qtdeHorasTrabalhoDia = qtdeHorasTrabalhoDia;
 	}
 
-	@Column(name = "qtde_horas_almoco", nullable = true)
+	@Column(name = "qtd_horas_almoco", nullable = true)
 	public Float getQtdeHorasAlmoco() {
 		return qtdeHorasAlmoco;
 	}
@@ -196,7 +196,7 @@ public class Funcionario implements Serializable {
 	@Override
 	public String toString() {
 		return "Funcionario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", cpf=" + cpf
-				+ ", valorHora=" + valorHora + ", qtdeHorasTrabalhoDia=" + qtdeHorasTrabalhoDia + ", qtdeHorasAlmoco="
+				+ ", valorHora=" + valorHora + ", qtdHorasTrabalhoDia=" + qtdeHorasTrabalhoDia + ", qtdHorasAlmoco="
 				+ qtdeHorasAlmoco + ", perfil=" + perfil + ", dataCriacao=" + dataCriacao + ", dataAtualizacao="
 				+ dataAtualizacao + ", empresa=" + empresa + "]";
 	}
